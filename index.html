@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saksham Sharma · Motion Designer &amp; Video Editor</title>
+  <meta name="description" content="Saksham Sharma – motion graphics, SaaS animation, VFX, 2D/3D animation and documentary-style edits. Available for freelance projects.">
+  <meta property="og:title" content="Saksham Sharma · Motion Designer &amp; Video Editor">
+  <meta property="og:description" content="Motion graphics, SaaS animation, VFX and documentary-style edits that make brands and stories move.">
+  <meta property="og:image" content="showreel-poster.jpg">
+  <meta name="theme-color" content="#0A0B0F">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- film grain texture over the whole page -->
+  <svg class="grain" aria-hidden="true">
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#grain)"/>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Saksham Sharma – back to top">
+        <span class="brand-mark glass">SS</span>
+        <span class="brand-name">Saksham Sharma</span>
+      </a>
+      <button class="menu-btn glass" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#showreel">Showreel</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-ghost btn-sm" href="https://wa.me/919084165033" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-row">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="live-dot"></span>Available for freelance projects</p>
+          <h1 class="hero-title glow reveal">Saksham<br>Sharma</h1>
+          <p class="hero-role reveal">Motion designer · Video editor · VFX artist</p>
+          <p class="hero-lead reveal">Motion graphics, animation and edits that make brands and stories <em>move</em>.</p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#showreel">
+              <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              Watch showreel
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/919084165033" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Animated editing-software panel (made for this site) -->
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="editor glass">
+            <div class="editor-bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="file">showreel_final_v3.mp4</span>
+              <span class="fps">24 fps</span>
+            </div>
+            <div class="monitor">
+              <div class="monitor-inner">
+                <span class="kicker">I make</span>
+                <span class="word-rotator"><span class="word glow">Motion</span></span>
+              </div>
+              <span class="safe-area"></span>
+            </div>
+            <div class="transport">
+              <span class="tc" id="heroTimecode">00:00:00:00</span>
+              <span class="transport-icons">
+                <svg class="ic" width="16" height="16" viewBox="0 0 24 24"><path d="M6 6v12M18 6l-9 6 9 6z"/></svg>
+                <svg class="ic play-ic" width="18" height="18" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+                <svg class="ic" width="16" height="16" viewBox="0 0 24 24"><path d="M18 6v12M6 6l9 6-9 6z"/></svg>
+              </span>
+              <span class="tc dim">00:00:15:12</span>
+            </div>
+            <div class="timeline">
+              <div class="ruler"></div>
+              <div class="track"><span class="label">V2</span>
+                <div class="lane">
+                  <span class="clip c-violet" style="--l:8%;--w:22%;--d:.15s">Title</span>
+                  <span class="clip c-violet" style="--l:58%;--w:18%;--d:.35s">Logo</span>
+                </div>
+              </div>
+              <div class="track"><span class="label">V1</span>
+                <div class="lane">
+                  <span class="clip c-cyan" style="--l:0%;--w:30%;--d:.25s">Intro</span>
+                  <span class="clip c-soft" style="--l:31%;--w:26%;--d:.4s">Product</span>
+                  <span class="clip c-cyan" style="--l:58%;--w:24%;--d:.55s">Reveal</span>
+                  <span class="clip c-soft" style="--l:83%;--w:17%;--d:.7s">End</span>
+                </div>
+              </div>
+              <div class="track"><span class="label">A1</span>
+                <div class="lane"><div class="waveform" id="heroWave"></div></div>
+              </div>
+              <div class="playhead"><span></span></div>
+            </div>
+          </div>
+
+          <div class="graph glass">
+            <span class="graph-label">Graph editor · Ease in-out</span>
+            <svg viewBox="0 0 160 90" class="graph-svg">
+              <path class="graph-grid" d="M0 22.5H160M0 45H160M0 67.5H160M40 0V90M80 0V90M120 0V90"/>
+              <path class="graph-handle" d="M12 78 L70 78 M148 12 L90 12"/>
+              <path class="graph-curve" d="M12 78 C70 78 90 12 148 12"/>
+              <circle class="graph-key" cx="12" cy="78" r="4"/>
+              <circle class="graph-key" cx="148" cy="12" r="4"/>
+              <circle class="graph-hd" cx="70" cy="78" r="3"/>
+              <circle class="graph-hd" cx="90" cy="12" r="3"/>
+              <circle class="graph-dot" r="4.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="wrap about-row">
+        <div class="photo-frame glass reveal">
+          <img src="saksham.jpg" alt="Portrait of Saksham Sharma" width="425" height="638">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <span class="scanner" aria-hidden="true"></span>
+          <span class="rec" aria-hidden="true"><i></i>REC</span>
+        </div>
+        <div class="about-copy">
+          <p class="marker reveal">00:12 · About</p>
+          <h2 class="section-title glow reveal">I'm Saksham.<br>I make things move.</h2>
+          <p class="body-lg reveal">I'm a motion designer, video editor and VFX artist. I turn ideas, products and stories into short, cinematic videos with clean motion graphics, SaaS-style animation, 2D and 3D animation, visual effects and documentary-style edits.</p>
+          <p class="body-lg reveal">If you're a brand, a creator or a business, I'll help your content stop the scroll and say what it needs to, clearly.</p>
+          <ul class="pills reveal" aria-label="What I do">
+            <li class="glass">SaaS Animation</li>
+            <li class="glass">Motion Graphics</li>
+            <li class="glass">VFX</li>
+            <li class="glass">2D &amp; 3D Animation</li>
+            <li class="glass">Documentary Edits</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOWREEL ============ -->
+    <section class="section" id="showreel">
+      <div class="wrap showreel-row">
+        <div class="showreel-copy">
+          <p class="marker reveal">00:24 · Showreel</p>
+          <h2 class="section-title glow reveal">Showreel</h2>
+          <p class="body-lg reveal">A quick look at the kind of work I make. Hit play with sound on.</p>
+        </div>
+        <div class="reel-frame glass reveal" id="reelFrame">
+          <video id="reelVideo" muted loop playsinline preload="metadata"></video>
+          <button class="reel-play" type="button" id="reelPlay">
+            <span class="play-circle"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+            <span class="reel-label">Play with sound</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="work-head">
+          <div>
+            <p class="marker reveal">00:36 · Work</p>
+            <h2 class="section-title glow reveal">My work</h2>
+          </div>
+          <p class="body-md reveal" id="workBlurb"></p>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="Work categories" id="workTabs"></div>
+        <div class="work-grid" id="workGrid" role="tabpanel" aria-labelledby=""></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <p class="marker reveal">00:48 · Services</p>
+        <h2 class="section-title glow reveal">What I can offer you</h2>
+        <div class="services">
+          <article class="svc glass reveal">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><path d="M3 19C9 19 9 5 21 5"/><circle cx="3" cy="19" r="1.6"/><circle cx="21" cy="5" r="1.6"/></svg></span>
+            <h3>Motion Graphics &amp; SaaS Animation</h3>
+            <p>Logo reveals, product promos, app and SaaS explainers, and kinetic type for ads and reels.</p>
+          </article>
+          <article class="svc glass reveal">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>
+            <h3>VFX</h3>
+            <p>Compositing, clean-ups, screen replacements and effects that blend into real footage.</p>
+          </article>
+          <article class="svc glass reveal">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span>
+            <h3>2D &amp; 3D Animation</h3>
+            <p>Characters, objects and scenes animated from scratch to explain an idea or show off a product.</p>
+          </article>
+          <article class="svc glass reveal">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></span>
+            <h3>Documentary Edits</h3>
+            <p>Story-led edits with cinematic pacing, captions and sound design that hold attention.</p>
+          </article>
+        </div>
+
+        <div class="process reveal">
+          <p class="process-title">How we'll work</p>
+          <div class="process-line" aria-hidden="true"><span></span></div>
+          <ol class="steps">
+            <li class="glass"><span class="num">01</span><strong>Share your idea</strong><span>Message me on WhatsApp</span></li>
+            <li class="glass"><span class="num">02</span><strong>Plan &amp; storyboard</strong><span>We lock the look and script</span></li>
+            <li class="glass"><span class="num">03</span><strong>First cut</strong><span>You review and give notes</span></li>
+            <li class="glass"><span class="num">04</span><strong>Final delivery</strong><span>Ready for every platform</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact-inner">
+        <p class="marker reveal">01:00 · Contact</p>
+        <h2 class="contact-title glow reveal">Let's make it<br>move.</h2>
+        <p class="body-lg reveal">Got a video, ad or story in mind? Send me your idea and let's talk about it.</p>
+        <div class="wave reveal" id="contactWave" aria-hidden="true"></div>
+        <div class="contact-cards">
+          <a class="ccard glass reveal" href="https://wa.me/919084165033" target="_blank" rel="noopener">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c.3 2 2.5 4.2 4.5 4.5l1.2-1.2 2 1-.5 1.6c-3.8.3-8-3.9-7.7-7.7l1.6-.5 1 2z"/></svg></span>
+            <span class="ccard-text">
+              <span class="ccard-label">WhatsApp</span>
+              <span class="ccard-value">+91 90841 65033</span>
+              <span class="ccard-cta">Chat on WhatsApp →</span>
+            </span>
+          </a>
+          <a class="ccard glass reveal" href="https://instagram.com/saksham__sharma021" target="_blank" rel="noopener">
+            <span class="icbox" aria-hidden="true"><svg class="ic" width="26" height="26" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></span>
+            <span class="ccard-text">
+              <span class="ccard-label">Instagram</span>
+              <span class="ccard-value">@saksham__sharma021</span>
+              <span class="ccard-cta">See my reels →</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> Saksham Sharma</span>
+      <span>Motion Graphics · Video Editing · VFX</span>
+    </div>
+  </footer>
+
+  <!-- Video player popup -->
+  <dialog class="player" id="player" aria-label="Video player">
+    <div class="player-inner">
+      <div class="player-head">
+        <span class="player-title" id="playerTitle"></span>
+        <button class="player-close" type="button" id="playerClose" aria-label="Close video">
+          <svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <video id="playerVideo" controls playsinline></video>
+    </div>
+  </dialog>
+
+  <script src="works.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
